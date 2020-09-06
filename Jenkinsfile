@@ -11,10 +11,10 @@ node() {
     }
     
      stage('docker build&push'){
-      sh "docker build -t webapp:v6 ."
-      sh "docker tag webapp:v6 kaushikrahul08/webapp:v6"
+      sh "docker build -t webapp:latest ."
+      sh "docker tag webapp:latest kaushikrahul08/webapp:latest"
       sh "docker login -u 'kaushikrahul08' -p 'Dristi@1381' docker.io"
-      sh "docker push kaushikrahul08/webapp:v6"
+      sh "docker push kaushikrahul08/webapp:latest"
     } 
     
 }
