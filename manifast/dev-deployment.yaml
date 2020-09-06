@@ -23,7 +23,7 @@ metadata:
   name: frontend
   namespace: test-api-dev
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       tier: frontend
