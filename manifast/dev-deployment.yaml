@@ -34,3 +34,6 @@ spec:
     spec:
       containers:
         - image: kaushikrahul08/webapp
+          name: frontend
+          ports:
+            - containerPort: 8000
