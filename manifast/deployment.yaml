@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: kaushikrahul08/webapp:v1.6
+        image: kaushikrahul08/webapp:v1.7
         ports:
         - containerPort: 8000
