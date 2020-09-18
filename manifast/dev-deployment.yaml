@@ -4,12 +4,13 @@ metadata:
   name: test-api-dev
   namespace: test-api-dev
 spec:
-  selector:
-    app: frontend
   ports:
-    - port: 8085
-      targetPort: 1521
-  type: LoadBalancer
+    - port: 80
+      protocol: TCP
+      targetPort: 8000
+  selector:
+    app: myapp
+  type: ClusterIP
 ---
 apiVersion: apps/v1
 kind: ReplicaSet
