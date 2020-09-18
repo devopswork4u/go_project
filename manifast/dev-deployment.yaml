@@ -36,4 +36,4 @@ spec:
         - image: kaushikrahul08/webapp
           name: frontend
           ports:
-            - containerPort: 1521
+            - containerPort: 8000
