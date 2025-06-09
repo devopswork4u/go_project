@@ -1,9 +1,11 @@
 FROM golang
 
-ADD . /go/src/github.com/azure-devops/k8s-demo
+WORKDIR /go/src/github.com/azure-devops/spin-kub-demo
 
-RUN go install github.com/azure-devops/k8s-demo
+COPY . .
 
-ADD ./content /content
+RUN go install github.com/azure-devops/spin-kub-demo@latest
 
-ENTRYPOINT /go/bin/k8s-demo
+COPY ./content /content
+
+ENTRYPOINT ["/go/bin/spin-kub-demo", "--port", "8010"]
