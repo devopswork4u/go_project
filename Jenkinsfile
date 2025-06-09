@@ -4,10 +4,10 @@ node() {
     }
     
     stage('docker build&push'){
-      sh "docker build -t webapp:v1 ."
-      sh "docker tag webapp:v1 kaushikrahul08/webapp:v1"
-      sh "docker login -u 'kaushikrahul08' -p 'CEazBdcta05CfVV1G' docker.io"
-      sh "docker push kaushikrahul08/webapp:v1"
+      sh "docker build -t go-app ."
+      sh "docker tag go-app kaushikrahul08/go-app:v1"
+      sh "docker login -u 'kaushikrahul08' -p '' docker.io"
+      sh "docker push kaushikrahul08/go-app:v1""
     } 
     
 }
